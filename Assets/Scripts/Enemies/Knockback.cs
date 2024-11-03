@@ -24,6 +24,7 @@ public class Knockback : MonoBehaviour
                 if(other.gameObject.CompareTag("Enemy")){
                     hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
                     other.GetComponent<Enemy>().knock(hit,knockTime);
+                    Debug.Log("halo");
                 }
 
                 if(other.gameObject.CompareTag("Player")){
