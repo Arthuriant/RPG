@@ -4,7 +4,9 @@ using UnityEngine.UI;
 
 public class RoomMovement : MonoBehaviour
 {
-    public Vector2 cameraChange;
+
+    public Vector2 cameraChangeMinimum;
+    public Vector2 cameraChangeMaximum;
     public Vector3 playerChange;
     private CameraMovement cam;
     public bool needText;
@@ -14,7 +16,7 @@ public class RoomMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        cam = Camera.main.GetComponent<CameraMovement>();
+        cam = GameObject.Find("Camera").GetComponent<CameraMovement>();
     }
 
     // Update is called once per frame
@@ -26,8 +28,8 @@ public class RoomMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player")){
-            cam.minPotition += cameraChange;
-            cam.maxPotition += cameraChange;
+            cam.minPotition = cameraChangeMinimum;
+            cam.maxPotition = cameraChangeMaximum;
             other.transform.position += playerChange;
             if(needText){
                 StartCoroutine(placeNameCount());

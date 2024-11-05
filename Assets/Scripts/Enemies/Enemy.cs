@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
-
+using CameraShake;
 public enum EnemyState{
     idle,
     walk,
@@ -15,11 +15,33 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+
+    protected Animator anim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    protected SpriteRenderer sprite;
+
+    void Awake()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+
+    }
     public void knock(Rigidbody2D myRigdBody, float knockTime)
     {
+
         StartCoroutine(knockCo(myRigdBody,knockTime));
+    }
+
+    private IEnumerator hitflash(){
+        int i = 0;
+        while(i<5){
+            sprite.color = Color.red;
+            yield return new WaitForSeconds(0.02f);
+            sprite.color = Color.white;
+            yield return new WaitForSeconds(0.02f);
+            i++;
+        }
     }
 
     private IEnumerator knockCo(Rigidbody2D myRigidBody, float knockTime)
@@ -30,5 +52,32 @@ public class Enemy : MonoBehaviour
             myRigidBody .linearVelocity = Vector2.zero;
             currentState = EnemyState.idle;
         }
+     }
+
+     private IEnumerator animasi(float Time){
+        anim.SetBool("wakeUp",false);
+        anim.SetBool("Damaged", true);
+        yield return new WaitForSecondsRealtime(Time);
+        anim.SetBool("wakeUp",true);
+        anim.SetBool("Damaged", false);
+
+
+     }
+
+     private void OnTriggerEnter2D(Collider2D other)
+     {
+        if(other.CompareTag("Hitbox")){
+            Hurt();
+        }
+     }
+
+     private void Hurt(){
+        CameraShaker.Presets.Explosion2D(0.5f , 1.2f,0.15f);
+        StartCoroutine(hitflash());
+        StartCoroutine(animasi(0.5f));
+        HitStop.instances.init(0.075f);
+        
+
+    
      }
 }

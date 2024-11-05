@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Slime : Enemy
@@ -8,14 +9,13 @@ public class Slime : Enemy
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
-    public Animator anim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentState = EnemyState.idle;
         target = GameObject.FindWithTag("Player").transform;
         myRigidbody = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,12 +34,25 @@ public class Slime : Enemy
             changeAnim(temp - transform.position);
             myRigidbody.MovePosition(temp);
             ChangeState(EnemyState.walk); 
+            
             anim.SetBool("wakeUp", true);
+            }else if(currentState == EnemyState.stagger){
+               
             }
         }else if (Vector3.Distance(target.position, transform.position)> chaseRadius ){
+
             anim.SetBool("wakeUp",false);
+    
         }
     }
+
+    private IEnumerator takehit(float time)
+    {
+        anim.SetBool("Damaged", true);
+        yield return new WaitForSecondsRealtime(time);
+        anim.SetBool("Damaged", false);
+    }
+    
 
     private void SetAnimFloat(Vector2 setVector){
         anim.SetFloat("moveX" , setVector.x);
