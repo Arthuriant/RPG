@@ -6,6 +6,7 @@ public class Knockback : MonoBehaviour
 {
     public float thrust;
     public float knockTime;
+    public float damage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -21,9 +22,9 @@ public class Knockback : MonoBehaviour
                 Vector2 difference = hit.transform.position - transform.position;
                 difference = difference.normalized * thrust;
                 hit.AddForce(difference, ForceMode2D.Impulse);
-                if(other.gameObject.CompareTag("Enemy")){
+                if(other.gameObject.CompareTag("Enemy") && other.isTrigger){
                     hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
-                    other.GetComponent<Enemy>().knock(hit,knockTime);
+                    other.GetComponent<Enemy>().knock(hit,knockTime, damage);
                 }
 
                 if(other.gameObject.CompareTag("Player")){

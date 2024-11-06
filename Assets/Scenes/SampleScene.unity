@@ -11574,7 +11574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  health: 3
+  maxHealth: {fileID: 11400000, guid: 67ced5ac9a39004448a0478b6623f60d, type: 2}
+  health: 0
   enemyName: Kipli
   baseAttack: 1
   moveSpeed: 4
@@ -11642,6 +11643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
+  damage: 0
 --- !u!1 &241058919
 GameObject:
   m_ObjectHideFlags: 0
@@ -13971,6 +13973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
+  damage: 0
 --- !u!61 &793724886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14310,6 +14313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
+  damage: 1
 --- !u!1 &896094043
 GameObject:
   m_ObjectHideFlags: 0
@@ -14742,6 +14746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
+  damage: 1
 --- !u!1 &1240419269
 GameObject:
   m_ObjectHideFlags: 0
@@ -15071,6 +15076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
+  damage: 1
 --- !u!1 &1665504923
 GameObject:
   m_ObjectHideFlags: 0
@@ -34928,6 +34934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
+  damage: 1
 --- !u!1 &2036898867
 GameObject:
   m_ObjectHideFlags: 0

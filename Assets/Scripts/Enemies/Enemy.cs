@@ -11,10 +11,12 @@ public enum EnemyState{
 public class Enemy : MonoBehaviour
 {   
     public EnemyState currentState;
-    public int health;
+    public FloatValue maxHealth;
+    public float health;
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+
 
     protected Animator anim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,14 +25,23 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
+        health = maxHealth.initialValue;
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
     }
-    public void knock(Rigidbody2D myRigdBody, float knockTime)
+
+    private void TakeDamage(float damage){
+        health -= damage;
+        if(health <= 0){
+            this.gameObject.SetActive(false);
+        }
+    }
+    public void knock(Rigidbody2D myRigdBody, float knockTime, float damage)
     {
 
         StartCoroutine(knockCo(myRigdBody,knockTime));
+        TakeDamage(damage);
     }
 
     private IEnumerator hitflash(){
