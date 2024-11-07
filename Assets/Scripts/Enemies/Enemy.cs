@@ -40,8 +40,7 @@ public class Enemy : MonoBehaviour
     public void knock(Rigidbody2D myRigdBody, float knockTime, float damage)
     {
 
-        StartCoroutine(knockCo(myRigdBody,knockTime));
-        TakeDamage(damage);
+        StartCoroutine(knockCo(myRigdBody,knockTime,damage));
     }
 
     private IEnumerator hitflash(){
@@ -55,13 +54,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private IEnumerator knockCo(Rigidbody2D myRigidBody, float knockTime)
+    private IEnumerator knockCo(Rigidbody2D myRigidBody, float knockTime, float damage)
      {
         if(myRigidBody != null )
         {
             yield return new WaitForSeconds(knockTime);
             myRigidBody .linearVelocity = Vector2.zero;
             currentState = EnemyState.idle;
+             TakeDamage(damage);
         }
      }
 
