@@ -23,11 +23,13 @@ public class PlayerMovement : MonoBehaviour
     public PlayerState currentState;
     public FloatValue currentHealth;
     public Signal playerHealthSIgnal;
+    public VectorValue startingPosition;
 
     private SpriteRenderer sprite;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        transform.position = startingPosition.initialValue;
         currentState = PlayerState.walk;
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();

@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488dfafad1a25aa488f1831195080d15, type: 3}
   m_Name: Context Clue Off
   m_EditorClassIdentifier: 
-  Listeners:
-  - {fileID: 0}
+  Listeners: []
