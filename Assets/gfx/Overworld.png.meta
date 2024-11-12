@@ -136,7 +136,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -150,7 +150,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -174,7 +174,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -972,7 +972,41 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Overworld_0: -2671460228953875570
+      Overworld_1: -2689026045669087484
+      Overworld_10: 1829778442542560619
+      Overworld_11: 1042250435856239393
+      Overworld_12: 8276858336128014628
+      Overworld_13: 22681670905886300
+      Overworld_14: 1620404892285306412
+      Overworld_15: 1242996465418633367
+      Overworld_16: -2999399142424580601
+      Overworld_17: 1195820583082778069
+      Overworld_18: -4496587874173803107
+      Overworld_19: -910953043492846142
+      Overworld_2: -7179496123588461096
+      Overworld_20: 3471338428925595606
+      Overworld_21: 6307966979952246190
+      Overworld_22: -1133759038122202709
+      Overworld_23: -191729290340861241
+      Overworld_24: -5666481261984047100
+      Overworld_25: -67688370196173548
+      Overworld_26: 8503925898108693791
+      Overworld_27: -158234911645668671
+      Overworld_28: 1057873545096308223
+      Overworld_29: -4390251584830932216
+      Overworld_3: 5358339777047750641
+      Overworld_30: 9127930197081173706
+      Overworld_31: 4304790786426730767
+      Overworld_32: -3594059735059639123
+      Overworld_33: 4003859095993293133
+      Overworld_4: 136357672767500387
+      Overworld_5: 8004674553903682165
+      Overworld_6: -4047186976618406303
+      Overworld_7: -5552291726514319404
+      Overworld_8: 6677391079157347707
+      Overworld_9: 3745290752181560014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
