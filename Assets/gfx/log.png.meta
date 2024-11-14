@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -120,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -144,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -185,10 +185,10 @@ TextureImporter:
       name: log_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 97
-        width: 23
-        height: 25
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,10 +207,10 @@ TextureImporter:
       name: log_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 97
-        width: 22
-        height: 24
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,10 +229,10 @@ TextureImporter:
       name: log_2
       rect:
         serializedVersion: 2
-        x: 67
-        y: 97
-        width: 23
-        height: 25
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,10 +251,10 @@ TextureImporter:
       name: log_3
       rect:
         serializedVersion: 2
-        x: 100
-        y: 97
-        width: 22
-        height: 24
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: log_4
       rect:
         serializedVersion: 2
-        x: 131
+        x: 128
         y: 96
-        width: 30
-        height: 27
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +295,10 @@ TextureImporter:
       name: log_5
       rect:
         serializedVersion: 2
-        x: 164
-        y: 97
-        width: 22
-        height: 21
+        x: 160
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,10 +317,10 @@ TextureImporter:
       name: log_6
       rect:
         serializedVersion: 2
-        x: 6
-        y: 65
-        width: 23
-        height: 25
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +339,10 @@ TextureImporter:
       name: log_7
       rect:
         serializedVersion: 2
-        x: 38
-        y: 65
-        width: 22
-        height: 24
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: log_8
       rect:
         serializedVersion: 2
-        x: 70
-        y: 65
-        width: 23
-        height: 25
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +383,10 @@ TextureImporter:
       name: log_9
       rect:
         serializedVersion: 2
-        x: 103
-        y: 65
-        width: 21
-        height: 24
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,10 +405,10 @@ TextureImporter:
       name: log_10
       rect:
         serializedVersion: 2
-        x: 131
+        x: 128
         y: 64
-        width: 23
-        height: 22
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,10 +427,10 @@ TextureImporter:
       name: log_11
       rect:
         serializedVersion: 2
-        x: 150
-        y: 83
-        width: 10
-        height: 8
+        x: 160
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +449,10 @@ TextureImporter:
       name: log_12
       rect:
         serializedVersion: 2
-        x: 162
-        y: 64
-        width: 23
-        height: 24
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,10 +471,10 @@ TextureImporter:
       name: log_13
       rect:
         serializedVersion: 2
-        x: 9
-        y: 34
-        width: 15
-        height: 26
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,10 +493,10 @@ TextureImporter:
       name: log_14
       rect:
         serializedVersion: 2
-        x: 41
-        y: 33
-        width: 15
-        height: 26
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,10 +515,10 @@ TextureImporter:
       name: log_15
       rect:
         serializedVersion: 2
-        x: 73
-        y: 34
-        width: 15
-        height: 26
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +537,10 @@ TextureImporter:
       name: log_16
       rect:
         serializedVersion: 2
-        x: 105
-        y: 33
-        width: 16
-        height: 26
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: log_17
       rect:
         serializedVersion: 2
-        x: 131
+        x: 160
         y: 32
-        width: 25
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -581,10 +581,10 @@ TextureImporter:
       name: log_18
       rect:
         serializedVersion: 2
-        x: 156
-        y: 32
-        width: 29
-        height: 27
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -603,10 +603,10 @@ TextureImporter:
       name: log_19
       rect:
         serializedVersion: 2
-        x: 9
-        y: 2
-        width: 15
-        height: 26
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,10 +625,10 @@ TextureImporter:
       name: log_20
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1
-        width: 15
-        height: 26
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -647,10 +647,10 @@ TextureImporter:
       name: log_21
       rect:
         serializedVersion: 2
-        x: 73
-        y: 2
-        width: 15
-        height: 26
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -669,10 +669,10 @@ TextureImporter:
       name: log_22
       rect:
         serializedVersion: 2
-        x: 105
-        y: 1
-        width: 15
-        height: 26
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -687,33 +687,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: log_23
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 0
-        width: 28
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 590bdaf5f35375280800000000000000
-      internalID: -9054709979500662635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2768f1ccc6e0fe6438c617f2b30d1197
     internalID: 0
     vertices: []
     indices: 
@@ -722,7 +700,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      log_0: -5034061168752090764
+      log_1: -8771329076928401280
+      log_10: -5690133823277906687
+      log_11: -2570500000468905864
+      log_12: 8498479158080882289
+      log_13: -6457386710923275188
+      log_14: 681774289175886536
+      log_15: 2703527186074568732
+      log_16: 3107883342233372815
+      log_17: -822619953307990688
+      log_18: -128083769461270964
+      log_19: -3791062316690792145
+      log_2: 2376815873980901129
+      log_20: -2086765476746818828
+      log_21: 5566842953363755866
+      log_22: -7445369939883215787
+      log_3: -1512028583440225198
+      log_4: 8213902188476598959
+      log_5: -22439546833456996
+      log_6: -451413936476517383
+      log_7: 8458950633466780684
+      log_8: 3059174765694063163
+      log_9: -34017176892466219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
