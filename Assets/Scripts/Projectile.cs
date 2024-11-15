@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
-        lifetimeSeconds = lifetime;
+
     }
 
     // Update is called once per frame

@@ -16,16 +16,20 @@ public class Knockback : MonoBehaviour
             other.GetComponent<Pot>().Smash();
         }
 
-        if(other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player")){
+        if(other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Boss")){
             Rigidbody2D hit = other.GetComponent<Rigidbody2D>();
             if(hit != null){
                 Vector2 difference = hit.transform.position - transform.position;
                 difference = difference.normalized * thrust;
                 hit.AddForce(difference, ForceMode2D.Impulse);
                 if(other.gameObject.CompareTag("Enemy") && other.isTrigger){
-                    Debug.Log("masuk");
                     hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
                     other.GetComponent<Enemy>().knock(hit,knockTime, damage);
+                }
+
+                    if(other.gameObject.CompareTag("Boss") && other.isTrigger){
+                    hit.GetComponent<Boss>().currentState = BossState.stagger;
+                    other.GetComponent<Boss>().knock(hit,knockTime, damage);
                 }
 
                 if(other.gameObject.CompareTag("Player")){

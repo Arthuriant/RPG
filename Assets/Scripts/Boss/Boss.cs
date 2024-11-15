@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
+using CameraShake;
 
 public enum BossState{
     idle,
@@ -14,7 +15,7 @@ public class Boss : MonoBehaviour
 {   
     public BossState currentState;
     public float moveSpeed;// Kecepatan gerakan boss turun
-    private Animator anim;
+    protected Animator anim;
     private SpriteRenderer sprite;
     private Rigidbody2D myRb;
 
@@ -23,7 +24,12 @@ public class Boss : MonoBehaviour
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
-    bool isDashing = false;
+
+    public float health;
+    public GameObject staff;
+    public GameObject hand;
+
+
 
     void Start()
     {
@@ -65,7 +71,10 @@ public class Boss : MonoBehaviour
 
     if(distanceToTarget <= chaseRadius && distanceToTarget > attackRadius && distanceToTarget >5 )
     {
-         StartCoroutine(DashToTarget());
+        if (currentState != BossState.idle && currentState != BossState.dash)
+        {
+            StartCoroutine(DashToTarget());
+        }
     }
     else if (distanceToTarget <= 5 && distanceToTarget > attackRadius)
     {
@@ -77,7 +86,7 @@ public class Boss : MonoBehaviour
             myRb.MovePosition(temp);
             ChangeState(BossState.walk);
 
-            anim.SetBool("wakeUp", true);
+            anim.SetBool("SpawnDone", true);
         }
         else if (currentState == BossState.stagger)
         {
@@ -86,21 +95,30 @@ public class Boss : MonoBehaviour
     }
     else if (distanceToTarget > chaseRadius)
     {
-        anim.SetBool("wakeUp", false);
+        anim.SetBool("SpawnDone", false);
     }
 }
 
 private IEnumerator DashToTarget()
 {
-    ChangeState(BossState.dash);
-    isDashing = true;
+    ChangeState(BossState.idle);
 
-    yield return new WaitForSeconds(3);
+    yield return new WaitForSeconds(1.5f);
 
-    // Menggerakkan musuh ke target position dengan cepat
-    Vector3 temp = Vector3.MoveTowards(transform.position, target.position, 40 * Time.deltaTime);
-    Debug.Log(Time.deltaTime);
-    myRb.MovePosition(temp);
+    float distancetoTarget = Vector3.Distance(transform.position,target.position);
+    while(distancetoTarget>5f)
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Vector3 dashMovement = direction * 40 * Time.deltaTime;  // Menghitung pergerakan per frame
+
+        // Menggerakkan boss menggunakan Rigidbody2D
+        myRb.MovePosition(myRb.position + new Vector2(dashMovement.x, dashMovement.y));
+
+        // Update jarak ke target setiap frame
+        distancetoTarget = Vector3.Distance(transform.position, target.position);
+
+        yield return null;
+    }
     // Mengatur musuh kembali ke keadaan walk setelah dash
     ChangeState(BossState.walk);
 }
@@ -138,4 +156,57 @@ private IEnumerator DashToTarget()
         anim.SetFloat("moveY" , setVector.y);
 
     }
+
+        private void TakeDamage(float damage){
+        health -= damage;
+        if(health <= 0){
+            this.gameObject.SetActive(false);
+            hand.gameObject.SetActive(false);
+            staff.gameObject.SetActive(false);
+        }
+    }
+    public void knock(Rigidbody2D myRigdBody, float knockTime, float damage)
+    {
+
+        StartCoroutine(knockCo(myRigdBody,knockTime,damage));
+    }
+
+    
+     private void OnTriggerEnter2D(Collider2D other)
+     {
+        if(other.CompareTag("Hitbox")){
+            Hurt();
+        }
+     }
+
+        private IEnumerator knockCo(Rigidbody2D myRigidBody, float knockTime, float damage)
+     {
+        if(myRigidBody != null )
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRigidBody .linearVelocity = Vector2.zero;
+            currentState = BossState.idle;
+             TakeDamage(damage);
+        }
+     }
+
+         private IEnumerator hitflash(){
+        int i = 0;
+        while(i<5){
+            sprite.color = Color.red;
+            yield return new WaitForSeconds(0.02f);
+            sprite.color = Color.white;
+            yield return new WaitForSeconds(0.02f);
+            i++;
+        }
+    }
+
+         private void Hurt(){
+        CameraShaker.Presets.Explosion2D(0.5f , 1.2f,0.15f);
+        StartCoroutine(hitflash());
+        HitStop.instances.init(0.075f);
+        
+
+    
+     }
 }

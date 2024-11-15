@@ -50,6 +50,30 @@ TextureImporter:
   - first:
       213: 8888283198391880405
     second: boss-hand_15
+  - first:
+      213: 4897610001495191136
+    second: boss-hand_16
+  - first:
+      213: 3972754347452507861
+    second: boss-hand_17
+  - first:
+      213: -2512198516955176655
+    second: boss-hand_18
+  - first:
+      213: 2862427408050391881
+    second: boss-hand_19
+  - first:
+      213: 3705789949370136469
+    second: boss-hand_20
+  - first:
+      213: -1836461339188369679
+    second: boss-hand_21
+  - first:
+      213: 3209722447408124388
+    second: boss-hand_22
+  - first:
+      213: 4986698806934490998
+    second: boss-hand_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -161,7 +185,7 @@ TextureImporter:
       name: boss-hand_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 10
         y: 9
         width: 15
         height: 14
@@ -183,7 +207,7 @@ TextureImporter:
       name: boss-hand_1
       rect:
         serializedVersion: 2
-        x: 37
+        x: 38
         y: 9
         width: 19
         height: 16
@@ -205,7 +229,7 @@ TextureImporter:
       name: boss-hand_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 66
         y: 8
         width: 27
         height: 22
@@ -227,7 +251,7 @@ TextureImporter:
       name: boss-hand_3
       rect:
         serializedVersion: 2
-        x: 99
+        x: 100
         y: 5
         width: 25
         height: 16
@@ -249,10 +273,10 @@ TextureImporter:
       name: boss-hand_4
       rect:
         serializedVersion: 2
-        x: 135
-        y: 8
-        width: 15
-        height: 15
+        x: 134
+        y: 5
+        width: 25
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +295,10 @@ TextureImporter:
       name: boss-hand_5
       rect:
         serializedVersion: 2
-        x: 165
-        y: 9
-        width: 19
-        height: 16
+        x: 166
+        y: 8
+        width: 27
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +317,10 @@ TextureImporter:
       name: boss-hand_6
       rect:
         serializedVersion: 2
-        x: 193
-        y: 8
-        width: 27
-        height: 22
+        x: 202
+        y: 9
+        width: 19
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +339,10 @@ TextureImporter:
       name: boss-hand_7
       rect:
         serializedVersion: 2
-        x: 226
+        x: 234
         y: 9
-        width: 26
-        height: 16
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,9 +361,9 @@ TextureImporter:
       name: boss-hand_8
       rect:
         serializedVersion: 2
-        x: 263
+        x: 264
         y: 8
-        width: 17
+        width: 15
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -359,10 +383,10 @@ TextureImporter:
       name: boss-hand_9
       rect:
         serializedVersion: 2
-        x: 295
-        y: 7
-        width: 18
-        height: 18
+        x: 294
+        y: 9
+        width: 19
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +405,10 @@ TextureImporter:
       name: boss-hand_10
       rect:
         serializedVersion: 2
-        x: 327
-        y: 7
-        width: 16
-        height: 24
+        x: 322
+        y: 8
+        width: 27
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +427,10 @@ TextureImporter:
       name: boss-hand_11
       rect:
         serializedVersion: 2
-        x: 358
-        y: 4
-        width: 27
-        height: 15
+        x: 355
+        y: 9
+        width: 26
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +449,10 @@ TextureImporter:
       name: boss-hand_12
       rect:
         serializedVersion: 2
-        x: 391
-        y: 8
-        width: 17
-        height: 15
+        x: 387
+        y: 9
+        width: 26
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +471,10 @@ TextureImporter:
       name: boss-hand_13
       rect:
         serializedVersion: 2
-        x: 423
-        y: 7
-        width: 18
-        height: 18
+        x: 419
+        y: 8
+        width: 27
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,9 +494,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 455
-        y: 7
-        width: 16
-        height: 24
+        y: 9
+        width: 19
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,9 +515,9 @@ TextureImporter:
       name: boss-hand_15
       rect:
         serializedVersion: 2
-        x: 486
-        y: 4
-        width: 26
+        x: 489
+        y: 8
+        width: 15
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -505,6 +529,182 @@ TextureImporter:
       bones: []
       spriteID: 5da883f0a76895b70800000000000000
       internalID: 8888283198391880405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-hand_16
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 8
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e6583095ec7f340800000000000000
+      internalID: 4897610001495191136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-hand_17
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 7
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6abcbc70f022730800000000000000
+      internalID: 3972754347452507861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-hand_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 7
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131af9f42c0e22dd0800000000000000
+      internalID: -2512198516955176655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-hand_19
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 4
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b8f24df8269b720800000000000000
+      internalID: 2862427408050391881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-hand_20
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 8
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5977b68235c9d6330800000000000000
+      internalID: 3705789949370136469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-hand_21
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 7
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f660f954249386e0800000000000000
+      internalID: -1836461339188369679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-hand_22
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 7
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1db516f893b8c20800000000000000
+      internalID: 3209722447408124388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss-hand_23
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 4
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fc13de420543540800000000000000
+      internalID: 4986698806934490998
       vertices: []
       indices: 
       edges: []
@@ -531,7 +731,15 @@ TextureImporter:
       boss-hand_13: -1721307993671107509
       boss-hand_14: 357966868877517703
       boss-hand_15: 8888283198391880405
+      boss-hand_16: 4897610001495191136
+      boss-hand_17: 3972754347452507861
+      boss-hand_18: -2512198516955176655
+      boss-hand_19: 2862427408050391881
       boss-hand_2: -5392348597197603261
+      boss-hand_20: 3705789949370136469
+      boss-hand_21: -1836461339188369679
+      boss-hand_22: 3209722447408124388
+      boss-hand_23: 4986698806934490998
       boss-hand_3: -8689945207604548008
       boss-hand_4: -4204986967224253243
       boss-hand_5: -6281702929778497791
