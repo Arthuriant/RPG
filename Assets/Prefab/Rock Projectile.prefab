@@ -185,3 +185,4 @@ MonoBehaviour:
   directionToMove: {x: 0, y: 0}
   lifetime: 2
   myRigidbody: {fileID: 8518620362467208082}
+  Purple: {fileID: 4158786798705304155, guid: 788d1586996d793488d1316bd1aaf640, type: 3}

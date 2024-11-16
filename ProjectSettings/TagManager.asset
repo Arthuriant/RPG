@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Hitbox
   - Boss
+  - ProjectileBlue
+  - ProjectileRed
+  - ProjectilePurple
   layers:
   - Default
   - TransparentFX

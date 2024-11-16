@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1736359768350488254}
   m_Layer: 9
   m_Name: Beam
-  m_TagString: Untagged
+  m_TagString: ProjectileRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1445097580, guid: e5b05d9e8b80d7c4d8a36a447b38c12f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.2396226, b: 0.2396226, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -144,7 +144,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -208,3 +208,5 @@ MonoBehaviour:
   directionToMove: {x: 0, y: 0}
   lifetime: 2
   myRigidbody: {fileID: 7037089598977389093}
+  Purple: {fileID: 4158786798705304155, guid: 788d1586996d793488d1316bd1aaf640, type: 3}
+  player: {fileID: 8228365459346382241, guid: 391f91f784de5684b8096debe4798671, type: 3}
