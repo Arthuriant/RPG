@@ -26,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
     public VectorValue startingPosition;
 
     private SpriteRenderer sprite;
+    public Inventory playerInventory;
+    public SpriteRenderer receivedItemSprite;
+    public GameObject deathEffect;
 
     void Awake()
     {
@@ -43,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         transform.position = startingPosition.initialValue;
-        currentState = PlayerState.walk;
+        currentState = PlayerState.idle;
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -53,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {   
+        // is the player in interaction
+        if(currentState == PlayerState.interact)
+        {
+            return;
+        }
         Change = Vector2.zero;
         Change.x = Input.GetAxisRaw("Horizontal");
         Change.y = Input.GetAxisRaw("Vertical"); 
@@ -74,7 +82,31 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
-        currentState = PlayerState.idle;
+        if(currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
+    }
+
+    public void RaiseItem()
+    {
+        if(playerInventory.currentItem != null)
+        {
+        if(currentState != PlayerState.interact)
+        {
+        animator.SetBool("receive item",true);
+        currentState = PlayerState.interact;
+        receivedItemSprite.sprite = playerInventory.currentItem.itemSprite;
+        }
+        else
+        {
+            animator.SetBool("receive item",false);
+            currentState = PlayerState.idle;
+            receivedItemSprite.sprite = null;
+            playerInventory.currentItem = null;
+        }
+        }
+
     }
 
     void FixedUpdate()
@@ -117,7 +149,17 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            DeathEffect();
             this.gameObject.SetActive(false);
+        }
+    }
+
+        private void DeathEffect()
+    {
+        if(deathEffect != null)
+        {
+            GameObject effect = Instantiate(deathEffect, transform.position , Quaternion.identity);
+            Destroy(effect,1f);
         }
     }
 

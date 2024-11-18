@@ -1,14 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Sign : MonoBehaviour
+public class Sign : Interactable
 {
-    public Signal contextOn;
-    public Signal contextOff;
     public GameObject dialogBox;
     public Text dialogText;
     public string dialog;
-    public bool playerInRange;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +15,7 @@ public class Sign : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   Debug.Log("on running");
+    {   
         if(Input.GetKeyDown(KeyCode.Space) && playerInRange){
             if(dialogBox.activeInHierarchy){
                 dialogBox.SetActive(false);
@@ -28,21 +26,15 @@ public class Sign : MonoBehaviour
         }
     }
 
-    void  OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player")){
-            contextOn.Raise();
-            playerInRange = true;
-
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.CompareTag("Player")){
-            contextOff.Raise();
+        if(other.CompareTag("Player") && !other.isTrigger && playerInRange){
+            context.Raise();
             playerInRange = false;
             dialogBox.SetActive(false);
+
         }
     }
+
+    
 }

@@ -25,6 +25,7 @@ public class Hand : MonoBehaviour
     private float beamDelaySeconds;
     bool beamShot;
     public GameObject projectile;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,7 +58,11 @@ public class Hand : MonoBehaviour
             beamDelaySeconds = beamDelay;
         }
 
-        Casting();
+        float distanceToTarget = Vector3.Distance(target.position, transform.position);
+        if(distanceToTarget <= chaseRadius && distanceToTarget > attackRadius)
+        {
+            Casting();  
+        }
 
     }
     // Update is called once per frame

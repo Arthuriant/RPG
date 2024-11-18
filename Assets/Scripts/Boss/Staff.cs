@@ -57,8 +57,11 @@ public class Staff : MonoBehaviour
             beamDelaySeconds = beamDelay;
         }
 
-        Casting();
-
+        float distanceToTarget = Vector3.Distance(target.position, transform.position);
+        if(distanceToTarget <= chaseRadius && distanceToTarget > attackRadius)
+        {
+            Casting();  
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
