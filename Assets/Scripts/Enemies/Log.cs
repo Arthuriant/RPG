@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using CameraShake;
 
 public class Log : Enemy
 {
@@ -65,12 +66,6 @@ public class Log : Enemy
         }
     }
 
-    private IEnumerator takehit(float time)
-    {
-        anim.SetBool("Damaged", true);
-        yield return new WaitForSecondsRealtime(time);
-        anim.SetBool("Damaged", false);
-    }
     
 
     private void SetAnimFloat(Vector2 setVector){

@@ -19,7 +19,7 @@ public class Boss : MonoBehaviour
     private SpriteRenderer sprite;
     private Rigidbody2D myRb;
 
-    private float spawnDelaySeconds = 3f;
+    private float spawnDelaySeconds = 1f;
 
     public Transform target;
     public float chaseRadius;

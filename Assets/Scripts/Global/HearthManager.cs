@@ -36,25 +36,22 @@ public class HearthManager : MonoBehaviour
 
     public void UpdateHearts()
     {
-        Debug.Log("full");
+        InitHearts();
         float tempHealth = playerCurrentHealth.RuntimeValue /2;
         for ( int i=0 ; i<heartContainers.RuntimeValue;i++)
         {
             if(i <= tempHealth-1)
             {
-                Debug.Log("full");
                 hearts[i].sprite = fullHeart;
                 //full hearth
             }else if (i>=tempHealth)
             {
                 //empty hearth
                  hearts[i].sprite = emptyHeart;
-                  Debug.Log("Empty");
             }else
             {
                 //half full hearth
                  hearts[i].sprite = halfFullHeart;
-                  Debug.Log("halffull");
             }
         }
 

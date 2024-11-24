@@ -15,7 +15,7 @@ public class Hand : MonoBehaviour
     public HandState currentState;
     private Animator anim;
     private Rigidbody2D myRb;
-    private float spawnDelaySeconds = 3f;
+    private float spawnDelaySeconds = 1f;
     private float castingDelaySecond = 3f;
     private bool cooldown;
     public float fireDelay;

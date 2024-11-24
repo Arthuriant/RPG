@@ -15,8 +15,8 @@ public class Staff : MonoBehaviour
     public StaffState currentState;
    
     private Rigidbody2D myRb;
-    private float spawnDelaySeconds = 3f;
-    private float castingDelaySecond = 3f;
+    private float spawnDelaySeconds = 1f;
+    private float castingDelaySecond = 2f;
     private bool cooldown;
     public float fireDelay;
     private float fireDelaySeconds;

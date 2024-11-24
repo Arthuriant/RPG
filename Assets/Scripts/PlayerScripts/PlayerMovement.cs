@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
+
 
 public enum PlayerState{
     walk,
@@ -149,19 +151,20 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            DeathEffect();
             this.gameObject.SetActive(false);
+            if (deathEffect != null)
+            {
+                GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+                Destroy(effect, 10f);
+            }
+
         }
     }
 
-        private void DeathEffect()
-    {
-        if(deathEffect != null)
-        {
-            GameObject effect = Instantiate(deathEffect, transform.position , Quaternion.identity);
-            Destroy(effect,1f);
-        }
-    }
+
+
+
+
 
     private IEnumerator knockCo(float knockTime)
     {

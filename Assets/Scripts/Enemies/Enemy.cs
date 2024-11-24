@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
     public GameObject deathEffect;
+    public LootTable thisLoot;
 
 
     protected Animator anim;
@@ -36,6 +37,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if(health <= 0){
             DeathEffect();
+            MakeLoot();
             this.gameObject.SetActive(false);
         }
     }
@@ -54,9 +56,23 @@ public class Enemy : MonoBehaviour
         StartCoroutine(knockCo(myRigdBody,knockTime,damage));
     }
 
+    private void MakeLoot()
+    {
+        if(thisLoot != null)
+        {
+            PowerUp current = thisLoot.LootPowerup();
+            if(current !=null)
+            {
+                Instantiate(current.gameObject, transform.position, Quaternion.identity);
+            }
+        }
+    }
+
     private IEnumerator hitflash(){
         int i = 0;
         while(i<5){
+            sprite.color = Color.white;
+            yield return new WaitForSeconds(0.02f);
             sprite.color = Color.red;
             yield return new WaitForSeconds(0.02f);
             sprite.color = Color.white;
@@ -94,7 +110,7 @@ public class Enemy : MonoBehaviour
      }
 
      private void Hurt(){
-        CameraShaker.Presets.Explosion2D(0.5f , 1.2f,0.15f);
+        CameraShaker.Presets.Explosion2D(20f, 20f, 0.3f);
         StartCoroutine(hitflash());
         StartCoroutine(animasi(0.5f));
         HitStop.instances.init(0.075f);

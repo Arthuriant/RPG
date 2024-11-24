@@ -9,7 +9,6 @@ public class ContextClue : MonoBehaviour
     public void ChangeContext()
     {
         contextActive = !contextActive;
-        Debug.Log("Status: " + contextActive);
         if(contextActive)
         {
             contextClue.SetActive(true);
