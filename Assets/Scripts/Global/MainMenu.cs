@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Dugeon");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void QuitToDekstop()

@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.3
-  damage: 2
+  damage: 1
 --- !u!114 &1736359768350488254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,4 +209,3 @@ MonoBehaviour:
   lifetime: 2
   myRigidbody: {fileID: 7037089598977389093}
   Purple: {fileID: 4158786798705304155, guid: 788d1586996d793488d1316bd1aaf640, type: 3}
-  player: {fileID: 8228365459346382241, guid: 391f91f784de5684b8096debe4798671, type: 3}

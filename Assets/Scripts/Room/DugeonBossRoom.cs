@@ -17,7 +17,11 @@ public class DugeonBossRoom : MonoBehaviour
 
     public virtual void OnTriggerExit2D(Collider2D other)
     {
-        virtualCamera.SetActive(false);
+
+        if(other.CompareTag("Player") && !other.isTrigger)
+        {
+            virtualCamera.SetActive(false);
+        }
     }
 
 }

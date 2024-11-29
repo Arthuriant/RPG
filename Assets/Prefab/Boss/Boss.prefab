@@ -196,6 +196,7 @@ MonoBehaviour:
   health: 6
   staff: {fileID: 5264919056504779394}
   hand: {fileID: 2736929661279350227}
+  deathEffect: {fileID: 4485333547190223205, guid: 496c16bec5e42594f8115ba29c14521f, type: 3}
 --- !u!61 &2428972201384542241
 BoxCollider2D:
   m_ObjectHideFlags: 0

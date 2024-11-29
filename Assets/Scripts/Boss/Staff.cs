@@ -32,7 +32,7 @@ public class Staff : MonoBehaviour
         myRb = GetComponent<Rigidbody2D>();
         currentState = StaffState.idle;
         
-        StartCoroutine(SpawnMovement());
+        //StartCoroutine(SpawnMovement());
         fireDelaySeconds = fireDelay;
         beamDelaySeconds = beamDelay;
         beamShot = false;

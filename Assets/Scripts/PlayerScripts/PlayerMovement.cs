@@ -32,8 +32,11 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer receivedItemSprite;
     public GameObject deathEffect;
 
+    AudioManager audioManager;
+
     void Awake()
     {
+        audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
         // Singleton setup
         if (Instance == null)
         {
@@ -68,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         Change.y = Input.GetAxisRaw("Vertical"); 
         if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack)
         {
+            audioManager.playSFX(audioManager.swordEffect);
             myRigidbody.MovePosition(myRigidbody.position + Change * speed * Time.deltaTime);
             StartCoroutine(AttackCo());
         }
@@ -145,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
         playerHealthSIgnal.Raise();
         if (currentHealth.RuntimeValue > 0)
         {
+            audioManager.playSFX(audioManager.hitPlayer);
             StartCoroutine(knockCo(knockTime));
             StartCoroutine(attacked());
             StartCoroutine(hitflash());

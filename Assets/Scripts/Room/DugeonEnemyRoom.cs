@@ -25,25 +25,23 @@ public class DugeonEnemyRoom : DugeonRoom
             return; // Keluar jika ada musuh yang masih aktif
         }
     }
+    if(!active)
+    {
+        OpenDoors();
+    }
     // Jika semua musuh sudah tidak aktif
     active = true;
     storedValue.RuntimeValue = active;
-    OpenDoors();
 }
 
     public void OpenDoors()
     {
-        for(int i = 0; i<doors.Length;i++)
-        {
-            doors[i].Open();
-        }
+
+        doors[0].Open();
     }
     public void CloseDoors()
     {
-        for(int i = 0; i<doors.Length;i++)
-        {
-            doors[i].Close();
-        }
+        doors[0].Close();
     }
 
     public override void OnTriggerEnter2D(Collider2D other)
@@ -57,13 +55,13 @@ public class DugeonEnemyRoom : DugeonRoom
             {
                 ChangeActivation(enemies[i], true);
             }
+            CloseDoors();
 
             for (int i = 0 ; i<pots.Length; i++)
             {
                 ChangeActivation(pots[i], true);
             }
             }
-        CloseDoors();
         virtualCamera.SetActive(true);
         }
     }

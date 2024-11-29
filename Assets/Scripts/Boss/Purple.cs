@@ -12,9 +12,18 @@ public class Purple : MonoBehaviour
 
     public Rigidbody2D myRigidbody;
 
+    
+    protected BossAudio audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindWithTag("AudioBoss").GetComponent<BossAudio>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioManager.playSFXHand(audioManager.purple);
         myRigidbody = GetComponent<Rigidbody2D>();
         lifetimeSeconds = lifetime;
 

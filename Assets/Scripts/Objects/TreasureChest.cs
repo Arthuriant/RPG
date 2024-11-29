@@ -9,6 +9,12 @@ public class TreasureChest : Interactable
     public GameObject dialogBox;
     public Text dialogText;
     private Animator anim;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -34,6 +40,7 @@ public class TreasureChest : Interactable
 
     public void Openchest()
     {
+        audioManager.playSFX(audioManager.chestOpen);
         //Dialog window on
         dialogBox.SetActive(true);
         //Dialog text = contenst text

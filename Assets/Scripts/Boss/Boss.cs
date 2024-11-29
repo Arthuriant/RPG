@@ -29,7 +29,14 @@ public class Boss : MonoBehaviour
     public GameObject staff;
     public GameObject hand;
 
+    protected BossAudio audioManager;
 
+    public GameObject deathEffect;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindWithTag("AudioBoss").GetComponent<BossAudio>();
+    }
 
     void Start()
     {
@@ -158,11 +165,16 @@ private IEnumerator DashToTarget()
     }
 
         private void TakeDamage(float damage){
-        health -= damage;
+        if(health != 0)
+        {
+            audioManager.playSFXBody(audioManager.hurt);
+            health -= damage;
+        }
         if(health <= 0){
-            this.gameObject.SetActive(false);
             hand.gameObject.SetActive(false);
             staff.gameObject.SetActive(false);
+            GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            this.gameObject.SetActive(false);
         }
     }
     public void knock(Rigidbody2D myRigdBody, float knockTime, float damage)

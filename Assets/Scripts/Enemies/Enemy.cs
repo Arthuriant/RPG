@@ -25,17 +25,25 @@ public class Enemy : MonoBehaviour
 
     protected SpriteRenderer sprite;
 
+    AudioManager audioManager;
+
     void Awake()
     {
         health = maxHealth.initialValue;
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
 
     }
 
     private void TakeDamage(float damage){
+        if(health>0)
+        {
+        audioManager.playSFX2(audioManager.hitEnemy);
         health -= damage;
-        if(health <= 0){
+        }
+        else if(health <= 0){
+            audioManager.playSFX2(audioManager.hitEnemydie);
             DeathEffect();
             MakeLoot();
             this.gameObject.SetActive(false);

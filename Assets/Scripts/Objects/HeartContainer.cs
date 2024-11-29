@@ -9,6 +9,7 @@ public class HeartContainer : PowerUp
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            audioManager.playSFX(audioManager.hpUp);
             heartContainers.RuntimeValue += 1;
             playerHealth.RuntimeValue = heartContainers.RuntimeValue * 2;
             powerupSignal.Raise();

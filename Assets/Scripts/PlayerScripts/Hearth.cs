@@ -21,6 +21,7 @@ public class Hearth : PowerUp
     {
         if(other.CompareTag("Player") && !other.isTrigger)
         {
+            audioManager.playSFX(audioManager.hpUp);
             playerHealth.RuntimeValue += amountToIncrease;
             if(playerHealth.initialValue> heartContainers.RuntimeValue * 2f)
             {

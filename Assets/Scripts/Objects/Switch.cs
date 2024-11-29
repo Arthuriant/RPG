@@ -7,6 +7,12 @@ public class Switch : MonoBehaviour
     public Sprite activeSprite;
     private SpriteRenderer mySprite;
     public Door thisDoor;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +26,7 @@ public class Switch : MonoBehaviour
 
     public void ActivateSwitch()
     {
+        audioManager.playSFX(audioManager.switchPushed);
         active = true;
         storedValue.RuntimeValue = active;
         thisDoor.Open();

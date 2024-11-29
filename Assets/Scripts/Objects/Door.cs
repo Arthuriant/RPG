@@ -14,9 +14,12 @@ public class Door : Interactable
     public Inventory playerInventory;
     public SpriteRenderer doorSprite;
     public BoxCollider2D physicsCollider;
+    AudioManager audioManager;
 
-
-
+    private void Awake()
+    {
+        audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
@@ -33,6 +36,7 @@ public class Door : Interactable
     }
     public void Open()
     {
+        audioManager.playSFX2(audioManager.doorOpen);
         doorSprite.enabled = false;
         open = true;
         physicsCollider.enabled = false;
@@ -40,6 +44,7 @@ public class Door : Interactable
 
     public void Close()
     {
+       audioManager.playSFX(audioManager.doorClosed);
        doorSprite.enabled = true;
        open = false;
        physicsCollider.enabled = true;

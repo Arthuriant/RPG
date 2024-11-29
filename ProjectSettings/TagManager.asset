@@ -11,6 +11,8 @@ TagManager:
   - ProjectileBlue
   - ProjectileRed
   - ProjectilePurple
+  - Audio
+  - AudioBoss
   layers:
   - Default
   - TransparentFX

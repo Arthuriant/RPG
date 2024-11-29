@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class    Projectile : MonoBehaviour
 {
     [Header("Movement Stuff")]
     public float moveSpeed;
@@ -10,9 +10,17 @@ public class Projectile : MonoBehaviour
     private float lifetimeSeconds;
     public Rigidbody2D myRigidbody;
     public GameObject Purple;
+
+    BossAudio audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindWithTag("AudioBoss").GetComponent<BossAudio>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioManager.playSFXStaff(audioManager.red);
         myRigidbody = GetComponent<Rigidbody2D>();
         lifetimeSeconds = lifetime; 
     }
@@ -47,6 +55,7 @@ public class Projectile : MonoBehaviour
 
         if(other.gameObject.CompareTag("ProjectilePurple") || other.gameObject.CompareTag("Player"))
         {
+            audioManager.playSFXStaff(audioManager.blue);
              Destroy(this.gameObject);
         }
 

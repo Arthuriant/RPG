@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.3
-  damage: 2
+  damage: 1
 --- !u!114 &8778014881348794965
 MonoBehaviour:
   m_ObjectHideFlags: 0
