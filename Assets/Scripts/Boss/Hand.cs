@@ -44,14 +44,14 @@ public class Hand : MonoBehaviour
 
     void Update()
     {
-        fireDelaySeconds -= Time.deltaTime;
+        fireDelaySeconds -= 0.02f;
         if(fireDelaySeconds <= 0)
         {
             cooldown = false;
             fireDelaySeconds =  fireDelay;
         }
 
-        beamDelaySeconds -= Time.deltaTime;
+        beamDelaySeconds -= 0.02f;
         if(beamDelaySeconds <= 0)
         {
             beamShot = true;
@@ -79,7 +79,7 @@ public class Hand : MonoBehaviour
 
         while (timer < spawnDelaySeconds)
         {
-            timer += Time.deltaTime;
+            timer += 0.02f;
             float progress = timer / spawnDelaySeconds; 
             transform.position = Vector2.Lerp(startPosition, targetPosition, progress); 
             yield return null;
@@ -131,12 +131,12 @@ public class Hand : MonoBehaviour
 
     if(distanceToTarget <= chaseRadius && distanceToTarget > attackRadius && distanceToTarget >5 )
     {
-        Vector3 temp = Vector3.MoveTowards(transform.position, target.position, 10 * Time.deltaTime);
+        Vector3 temp = Vector3.MoveTowards(transform.position, target.position, 10 * 0.02f);
         myRb.MovePosition(temp);
     }
     else if (distanceToTarget <= 5 && distanceToTarget > attackRadius)
     {
-        Vector3 temp = Vector3.MoveTowards(transform.position, target.position, 3 * Time.deltaTime);
+        Vector3 temp = Vector3.MoveTowards(transform.position, target.position, 3 * 0.02f);
         myRb.MovePosition(temp);
     }
     else if (distanceToTarget > chaseRadius)

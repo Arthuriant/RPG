@@ -60,7 +60,7 @@ public class Boss : MonoBehaviour
 
         while (timer < spawnDelaySeconds)
         {
-            timer += Time.deltaTime;
+            timer += 0.02f;
             float progress = timer / spawnDelaySeconds; // Kemajuan animasi dari 0 ke 1 dalam waktu 4 detik
             transform.position = Vector2.Lerp(startPosition, targetPosition, progress); // Interpolasi posisi
             yield return null;
@@ -87,7 +87,7 @@ public class Boss : MonoBehaviour
     {
         if (currentState == BossState.idle || currentState == BossState.walk && currentState != BossState.stagger)
         {
-            Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * 0.02f);
             changeAnim(temp - transform.position);
 
             myRb.MovePosition(temp);
@@ -116,7 +116,7 @@ private IEnumerator DashToTarget()
     while(distancetoTarget>5f)
     {
         Vector3 direction = (target.position - transform.position).normalized;
-        Vector3 dashMovement = direction * 40 * Time.deltaTime;  // Menghitung pergerakan per frame
+        Vector3 dashMovement = direction * 40 * 0.02f;  // Menghitung pergerakan per frame
 
         // Menggerakkan boss menggunakan Rigidbody2D
         myRb.MovePosition(myRb.position + new Vector2(dashMovement.x, dashMovement.y));

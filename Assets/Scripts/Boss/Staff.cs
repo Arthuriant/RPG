@@ -43,14 +43,14 @@ public class Staff : MonoBehaviour
 
     void Update()
     {
-        fireDelaySeconds -= Time.deltaTime;
+        fireDelaySeconds -= 0.02f;
         if(fireDelaySeconds <= 0)
         {
             cooldown = false;
             fireDelaySeconds =  fireDelay;
         }
 
-        beamDelaySeconds -= Time.deltaTime;
+        beamDelaySeconds -= 0.02f;
         if(beamDelaySeconds <= 0)
         {
             beamShot = true;
@@ -77,7 +77,7 @@ public class Staff : MonoBehaviour
 
         while (timer < spawnDelaySeconds)
         {
-            timer += Time.deltaTime;
+            timer += 0.02f;
             float progress = timer / spawnDelaySeconds; 
             transform.position = Vector2.Lerp(startPosition, targetPosition, progress); 
             yield return null;
@@ -128,7 +128,7 @@ public class Staff : MonoBehaviour
 
     if(distanceToTarget <= chaseRadius && distanceToTarget > attackRadius )
     {
-        Vector3 temp = Vector3.MoveTowards(transform.position, target.position, 5 * Time.deltaTime);
+        Vector3 temp = Vector3.MoveTowards(transform.position, target.position, 5 * 0.02f);
         myRb.MovePosition(temp);
     }
 }

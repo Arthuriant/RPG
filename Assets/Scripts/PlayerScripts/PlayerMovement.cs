@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack)
         {
             audioManager.playSFX(audioManager.swordEffect);
-            myRigidbody.MovePosition(myRigidbody.position + Change * speed * Time.deltaTime);
+            myRigidbody.MovePosition(myRigidbody.position + Change * speed * Time.fixedDeltaTime);
             StartCoroutine(AttackCo());
         }
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
@@ -139,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
-            myRigidbody.MovePosition(myRigidbody.position + Change * speed * Time.deltaTime);
+            myRigidbody.MovePosition(myRigidbody.position + Change * speed * Time.fixedDeltaTime);
         }
     } 
 

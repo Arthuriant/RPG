@@ -84,7 +84,7 @@ public class BoundedNPC : Interactable
 
     private void Move()
     {
-        Vector3 temp = myTransform.position + directionVector * speed * Time.deltaTime;
+        Vector3 temp = myTransform.position + directionVector * speed * 0.02f;
         if(bounds.bounds.Contains(temp))
         {
              myRigidBody.MovePosition(temp);

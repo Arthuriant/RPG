@@ -21647,7 +21647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoundingShape2D: {fileID: 2098583727}
-  Damping: 0.5
+  Damping: 5
   SlowingDistance: 5
   OversizeWindow:
     Enabled: 0
@@ -21701,7 +21701,7 @@ MonoBehaviour:
     Enabled: 0
     m_Value: 0
   OutputChannel: 1
-  StandbyUpdate: 2
+  StandbyUpdate: 1
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
@@ -22061,7 +22061,7 @@ MonoBehaviour:
     Enabled: 0
     m_Value: 0
   OutputChannel: 1
-  StandbyUpdate: 2
+  StandbyUpdate: 1
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
@@ -22542,7 +22542,7 @@ MonoBehaviour:
     DefaultMode: 2
   DefaultBlend:
     Style: 1
-    Time: 1.5
+    Time: 2
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -23122,6 +23122,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777761974}
     - target: {fileID: 320046161187337761, guid: 1e25847b3dda51b44aa1d4c7032dd8d3, type: 3}
+      propertyPath: beamDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 320046161187337761, guid: 1e25847b3dda51b44aa1d4c7032dd8d3, type: 3}
+      propertyPath: fireDelay
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 320046161187337761, guid: 1e25847b3dda51b44aa1d4c7032dd8d3, type: 3}
       propertyPath: attackRadius
       value: 0.5
       objectReference: {fileID: 0}
@@ -23178,8 +23186,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777761974}
     - target: {fileID: 2534560789281463396, guid: 1e25847b3dda51b44aa1d4c7032dd8d3, type: 3}
+      propertyPath: beamDelay
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534560789281463396, guid: 1e25847b3dda51b44aa1d4c7032dd8d3, type: 3}
       propertyPath: fireDelay
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2534560789281463396, guid: 1e25847b3dda51b44aa1d4c7032dd8d3, type: 3}
       propertyPath: chaseRadius
@@ -23199,7 +23211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4634508097141813155, guid: 1e25847b3dda51b44aa1d4c7032dd8d3, type: 3}
       propertyPath: health
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4634508097141813155, guid: 1e25847b3dda51b44aa1d4c7032dd8d3, type: 3}
       propertyPath: target
@@ -23502,7 +23514,7 @@ Transform:
   m_GameObject: {fileID: 1221642771}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14487536, y: -1.1124067, z: -10}
+  m_LocalPosition: {x: 1.5711901, y: -3.0424068, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23575,7 +23587,7 @@ MonoBehaviour:
     Enabled: 0
     m_Value: 0
   OutputChannel: 1
-  StandbyUpdate: 2
+  StandbyUpdate: 1
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
@@ -29747,7 +29759,7 @@ MonoBehaviour:
     Enabled: 0
     m_Value: 0
   OutputChannel: 1
-  StandbyUpdate: 2
+  StandbyUpdate: 1
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
@@ -30038,7 +30050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2028583442552667339, guid: c36625edbbc36644cb7ec2b487517923, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.324001
+      value: 20.323992
       objectReference: {fileID: 0}
     - target: {fileID: 2028583442552667339, guid: c36625edbbc36644cb7ec2b487517923, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30091,6 +30103,10 @@ PrefabInstance:
     - target: {fileID: 8180510221880025116, guid: c36625edbbc36644cb7ec2b487517923, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180510221880025116, guid: c36625edbbc36644cb7ec2b487517923, type: 3}
+      propertyPath: something
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: 8368674244277472890, guid: c36625edbbc36644cb7ec2b487517923, type: 3}
       propertyPath: m_IsActive
