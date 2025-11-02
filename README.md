@@ -1,7 +1,7 @@
 # WANDERING TRAVELER (Demo Game RPG)
 
 <p align="center">
-  <img alt="Wandering Traveler Main Menu" src="[URL_UNTUK_MENU_UTAMA]" width="750">
+  <img width="750" alt="Wandering Traveler Main Menu" src="https://github.com/user-attachments/assets/acc94639-ea3b-4321-95e5-fcae0ed1a7b8" />
 </p>
 
 Sebuah demo game RPG 2D *top-down* yang dibuat menggunakan **Unity Engine**. Proyek ini adalah purwarupa (prototype) yang menampilkan mekanisme dasar game petualangan, termasuk pergerakan karakter, sistem dialog, dan pertarungan sederhana.
@@ -39,9 +39,7 @@ Proyek ini dibangun sepenuhnya menggunakan ekosistem Unity.
 Untuk menjalankan proyek ini di komputer Anda, Anda memerlukan **Unity Hub** dan **Unity Editor** versi yang kompatibel.
 
 1.  **Clone Repositori**
-    ```sh
-    git clone [URL_REPOSITORI_ANDA]
-    ```
+    *Clone atau Unduh repository ini
 
 2.  **Buka di Unity Hub**
     * Buka Unity Hub Anda.
@@ -50,7 +48,7 @@ Untuk menjalankan proyek ini di komputer Anda, Anda memerlukan **Unity Hub** dan
 
 3.  **Buka Scene & Jalankan**
     * Setelah proyek terbuka di Unity Editor, cari folder `Scenes` di jendela *Project*.
-    * Buka scene utama (misalnya `MainMenu` atau `SampleScene`).
+    * Buka scene utama (misalnya `StartMenu`).
     * Tekan tombol **Play** di bagian tengah atas editor untuk memulai demo.
 
 ---
@@ -59,12 +57,12 @@ Untuk menjalankan proyek ini di komputer Anda, Anda memerlukan **Unity Hub** dan
 
 Berikut adalah beberapa tampilan dari demo game.
 
-| Menu Utama | Dialog dalam Game |
+| Tampilan Main Menu | Dialog dalam Game |
 | :---: | :---: |
 | Tampilan awal saat game dimulai | Contoh sistem dialog dengan karakter |
-| <img alt="Main Menu" src="[URL_UNTUK_MENU_UTAMA]" width="450"> | <img alt="Dialog" src="[URL_UNTUK_DIALOG]" width="450"> |
+| <img width="450" alt="Wandering Traveler Main Menu" src="https://github.com/user-attachments/assets/acc94639-ea3b-4321-95e5-fcae0ed1a7b8" /> |  <img width="450"  alt="Screenshot 2025-11-02 113326" src="https://github.com/user-attachments/assets/7c65e2aa-322d-4b1e-a67c-6a6cdad064ef" />|
 
-| Gameplay (Eksplorasi & Pertarungan) |
-| :---: |
-| Tampilan gameplay melawan musuh |
-| <img alt="Gameplay Combat" src="[URL_UNTUK_GAMEPLAY_COMBAT]" width="700"> |
+| Pertarungan Melawan MOB | Pertarungan Melawan BOSS |
+| :---: | :---: |
+| Tampilan gameplay melawan musuh | Tampilan gameplay melawan musuh |
+| <img width="450"  alt="Screenshot 2025-11-02 113415" src="https://github.com/user-attachments/assets/7c15ebbe-ca76-4729-baa9-9714c052baf1" /> | <img width="450"  alt="Screenshot 2025-11-02 113551" src="https://github.com/user-attachments/assets/21516b81-888a-479c-aebf-cb5249f2d593" />|
